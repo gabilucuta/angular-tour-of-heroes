@@ -1,0 +1,25 @@
+<div class="wrapper">
+    <div *ngIf="hero">
+        <div class="section">
+            <h2>{{hero.name | uppercase }} Details</h2>
+            <div class="details">
+                <div class="name">
+                    <label for="hero-name">Hero name:</label>
+                    <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
+                </div>
+                <div class="power">
+                    <label for="hero-power">Hero power:</label>
+                    <input type="number" id="hero-power" [(ngModel)]="hero.power" placeholder="power" maxlength="2">
+                </div>
+                <div class="image">
+                    <label for="hero-image">Hero imgae (url):</label>
+                    <input id="hero-image" [(ngModel)]="hero.url" placeholder="url">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="buttons">
+        <button type="button" (click)="goBack()">go back</button>
+        <button type="button" (click)="save()">save</button>
+    </div>
+</div>

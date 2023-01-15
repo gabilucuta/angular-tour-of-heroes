@@ -1,0 +1,16 @@
+<div class="carousel-container">
+    <igx-carousel animationType="fade" #carousel>
+        <igx-slide *ngFor="let hero of heroes;">
+            <div class="image-container">
+                <a routerLink="/detail/{{hero.id}}">
+                    <div class="top-hero-detail">
+                        <div class="image" style="background-image: url('{{hero.url}}');"></div>
+                        <div class="name">{{hero.name}}</div>
+                        <div class="power">Power: {{hero.power}}</div>
+                    </div>
+                </a>
+                <button type="button" class="delete" title="delete hero" (click)="delete(hero)">Delete</button>
+            </div>
+        </igx-slide>
+    </igx-carousel>
+</div>

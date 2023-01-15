@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@use "igniteui-angular/theming" as *;
+@include core();
+@include typography($font-family: $material-typeface, $type-scale: $material-type-scale);
+@include theme($default-palette);
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1
+  }
+}

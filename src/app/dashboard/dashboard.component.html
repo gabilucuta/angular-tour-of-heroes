@@ -1,0 +1,13 @@
+<div class="wrapper">
+    <app-hero-search></app-hero-search>
+    <h2>Top Heroes</h2>
+    <div class="heroes-menu">
+        <a *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
+            <div class="top-hero-detail">
+                <div class="image" style="background-image: url('{{hero.url}}');"><img src="hero" alt=""></div>
+                <div class="name">{{hero.name}}</div>
+                <div class="power">Power: {{hero.power}}</div>
+            </div>
+        </a>
+    </div>
+</div>
